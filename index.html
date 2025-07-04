@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-slate-50 text-gray-800 font-sans scroll-smooth">
+<body class="bg-slate-50 text-gray-800 font-sans">
 
     <!-- Navbar -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -49,7 +49,7 @@
 
             <!-- Teks Profil -->
             <div class="space-y-5">
-            <h2 class="text-2xl font-bold text-blue-700">About Our Company</h2>
+            <h2 class="text-2xl font-bold text-sky-900">About Our Company</h2>
             <p class="text-gray-700">
                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -145,7 +145,7 @@
     </section>  
 
     <!-- Message Us Section -->
-    <section id="contact" class="min-h-screen py-20 px-4 bg-gray-100">
+    <section id="contact" class="min-h-screen py-20 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-sky-900 mb-8">Message Us</h2>
 
@@ -165,25 +165,42 @@
 
                 <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring-sky-500 focus:border-sky-500">
+                <input type="number" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring-sky-500 focus:border-sky-500">
                 </div>
 
                 <div>
                 <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring-sky-500 focus:border-sky-500"></textarea>
+                <textarea id="text" name="message" rows="4" required class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded shadow-sm focus:ring-sky-500 focus:border-sky-500"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-sky-700 text-white py-2 rounded hover:bg-sky-800 transition">Submit</button>
             </form>
 
             <!-- Display Submitted Data -->
-            <div id="displayBox" class="bg-sky-50 p-6 rounded shadow-md text-sm leading-relaxed">
-                <h3 class="text-lg font-bold mb-4 text-sky-900">Your Message Summary:</h3>
-                <p><b>Name:</b> <span id="displayName">-</span></p>
-                <p><b>Email:</b> <span id="displayEmail">-</span></p>
-                <p><b>Phone:</b> <span id="displayPhone">-</span></p>
-                <p><b>Message:</b> <span id="displayMessage">-</span></p>
+            <div id="displayBox" class="bg-sky-50 p-6 rounded shadow-md text-sm leading-relaxed mt-8 md:mt-0">
+            <h3 class="text-lg font-bold mb-4 text-sky-900 text-center">Your Message Summary:</h3>
+            
+                <div class="space-y-2 text-gray-800">
+                    <div class="flex">
+                    <div class="w-24 font-semibold">Name</div>
+                    <div>: <span id="displayName">-</span></div>
+                    </div>
+                    <div class="flex">
+                    <div class="w-24 font-semibold">Email</div>
+                    <div>: <span id="displayEmail">-</span></div>
+                    </div>
+                    <div class="flex">
+                    <div class="w-24 font-semibold">Phone</div>
+                    <div>: <span id="displayPhone">-</span></div>
+                    </div>
+                    <div class="flex items-start">
+                    <div class="w-24 font-semibold">Message</div>
+                    <div>: <span id="displayMessage">-</span></div>
+                    </div>
+                </div>
             </div>
+
+
 
             </div>
         </div>
